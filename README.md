@@ -1,18 +1,9 @@
 Этот код представляет собой простую реализацию нейронной сети с одним скрытым слоем для распознавания рукописных цифр из набора данных MNIST. Давайте разберем, что делает каждая часть кода:
 
-    Импорт необходимых библиотек:
-
-    python
-
-import numpy as np
-import matplotlib.pyplot as plt
-import utils
-
 Здесь импортируются библиотеки numpy для работы с массивами, matplotlib для визуализации данных и пользовательский модуль utils, который, предположительно, содержит функцию load_dataset для загрузки данных MNIST.
 
 Загрузка данных:
 
-python
 
 images, labels = utils.load_dataset()
 
@@ -20,7 +11,6 @@ images, labels = utils.load_dataset()
 
 Инициализация весов и смещений:
 
-python
 
 weights_input_to_hidden = np.random.uniform(-0.5, 0.5, (20, 784))
 weights_hidden_to_output = np.random.uniform(-0.5, 0.5, (10, 20))
@@ -31,7 +21,6 @@ bias_hidden_to_output = np.zeros((10, 1))
 
 Обучение нейронной сети:
 
-python
 
 epochs = 3
 learning_rate = 0.01
@@ -46,7 +35,6 @@ for epoch in range(epochs):
 
 Визуализация результата:
 
-python
 
 import random
 
