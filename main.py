@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 import utils
 
 images, labels = utils.load_dataset()
-
+#Инициализация весов и смещений
 weights_input_to_hidden = np.random.uniform(-0.5, 0.5, (20, 784))
 weights_hidden_to_output = np.random.uniform(-0.5, 0.5, (10, 20))
 
 bias_input_to_hidden = np.zeros((20, 1))
 bias_hidden_to_output = np.zeros((10, 1))
-
+#Обучение нейронки
 epochs = 3
 e_loss = 0
 e_correct = 0
@@ -44,7 +44,7 @@ for epoch in range(epochs):
     print(f"Accuracy: {round((e_correct / images.shape[0]) * 100, 3)}%")
     e_loss = 0
     e_correct = 0
-
+#Визуализация результата
     import random
 
     test_image = random.choice(images)
